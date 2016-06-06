@@ -29,9 +29,8 @@ $(document).ready(function(){
         $('#puntaje').html(puntaje);
         clean();
         if(cont===4) {
-            coder = random(codersPeru);
             coderm = random(codersMexico);
-            $('#foto').html("<img class= 'photos' src='fotos/peru/"+coder.image+"'/>");
+            $('#foto').html("<img class= 'photos' src='fotos/peru/"+coderm.image+"'/>");
             cont=0;
         }
     }
@@ -40,11 +39,9 @@ $(document).ready(function(){
 function random(arrays){
   var longitud=arrays.length;
   var num=Math.round(Math.random() * (longitud)) + 1;
-  var imagen=arrays[num];
+ var imagen=arrays[num];
   return imagen;
 }
 function clean(){
-   var tex = document.getElementById("inputName");
-   tex.value="";
-   tex.focus();
+  $('#inputName').val("");
 }
